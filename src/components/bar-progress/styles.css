@@ -1,0 +1,78 @@
+.bar-progress-container{
+    display: grid;
+}
+
+.bar-progress-label{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.box-parent
+{
+    display: flex;
+    justify-self: center;
+    filter: url('#flt_tag');
+}
+
+.box
+{
+    background-color: #779ca2;
+    height: 40px;
+    clip-path: polygon(0 0%,100% 0%,95% 100%,5% 100%);
+    margin-bottom: 10px;
+}
+
+.box:hover{
+    cursor: pointer;
+}
+
+.box.box1{
+    width: 250px;
+}
+
+.box.box2{
+    width: 200px;
+}
+
+.box.box3{
+    width: 150px;
+}
+
+.box.box4{
+    width: 100px;
+    clip-path: polygon(0 0%, 100% 0%, 90% 100%, 10% 100%);
+}
+
+.flt-svg {
+    visibility: hidden; 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+
+.triangle-container{
+    display: block;
+    justify-self: center;
+}
+
+.triangle {
+    --r:10px;  
+    width: 60px;
+    aspect-ratio: 1/cos(30deg);
+    --_g:calc(tan(60deg)*var(--r)) top var(--r),#000 98%,#0000 101%;
+    -webkit-mask:
+      conic-gradient(from 150deg at 50% calc(3*var(--r)/2 - 100%),#000 60deg,#0000 0)
+       0 0/100% calc(100% - 3*var(--r)/2) no-repeat,
+      radial-gradient(var(--r) at 50% calc(100% - 2*var(--r)),#000 98%,#0000 101%),
+      radial-gradient(var(--r) at left  var(--_g)),
+      radial-gradient(var(--r) at right var(--_g));
+    clip-path: polygon(50% 100%,100% 0,0 0);
+    background-color: #779ca2;
+  }
+  .triangle:hover{
+    cursor: pointer;
+  }
+  .selected{
+    background-color: #fff;
+  }
