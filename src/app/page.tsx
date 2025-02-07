@@ -21,9 +21,7 @@ export default function CirculerProgress() {
   return (
     <>
       {/* Page title */}
-      <div>
-        <h2>Intellect</h2>
-      </div>
+      <h2>Intellect</h2>
 
       <Grid2 container spacing={8} justifyContent="center">
         {/* Left section - Circular progress and slider */}
